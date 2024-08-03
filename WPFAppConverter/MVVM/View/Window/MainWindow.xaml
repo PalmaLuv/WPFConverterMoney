@@ -1,0 +1,48 @@
+﻿<Window x:Class="WPFAppConverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFAppConverter"
+        mc:Ignorable="d"
+        Title="{Binding TitleMainWindow}" Height="450" Width="800" Loaded="LoadingMainWindow" 
+        WindowStyle="None" AllowsTransparency="True" Background="{StaticResource MainBackgroung}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Style="{StaticResource WindowBorderHeaderStyle}" MouseDown="HeaderMouse">
+            <Grid>
+                <Label Content="{Binding TitleMainWindow}" VerticalAlignment="Center" 
+                       Style="{StaticResource WindowLableHeaderStyle}" Margin="0, -12"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Button Height="Auto" Width="25" Style="{StaticResource HeaderButton}" Content="_"/>
+                    <Button Height="Auto" Width="25" Style="{StaticResource HeaderButton}" Content="[]"/> <!-- TODO : Знайти нормальні іконки -->
+                    <Button Height="Auto" Width="40" Style="{StaticResource HeaderButton}" Content="⨉" FontSize="16" Name="Exit"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+        
+        <!-- Main -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Style="{StaticResource LeftNavPanel}">
+                <StackPanel>
+                    <RadioButton Style="{StaticResource MainNavPanel_RadioButton}" Content="Home"/>
+                    <RadioButton Style="{StaticResource MainNavPanel_RadioButton}" Content="Analitic"/>
+                    <RadioButton Style="{StaticResource MainNavPanel_RadioButton}" Content="None name"/>
+                    <RadioButton Style="{StaticResource MainNavPanel_RadioButton}" Content="Setting"/>
+                </StackPanel>
+                
+            </Border>
+        
+        </Grid>
+    </Grid>
+</Window>
