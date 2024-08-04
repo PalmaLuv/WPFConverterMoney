@@ -7,10 +7,33 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="MVVM\View\Pages\AnaliticPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\Pages\HomePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\Pages\SettingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MVVM\View\Pages\AnaliticPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\Pages\HomePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\Pages\SettingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MVVM\View\Window\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\Window\Style\ApplicationStyle.ligth.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resource\Icon\IconSVG.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

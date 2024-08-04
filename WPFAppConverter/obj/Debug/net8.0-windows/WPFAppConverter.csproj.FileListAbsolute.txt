@@ -20,3 +20,11 @@ C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-win
 C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-windows\WPFAppConverter.pdb
 C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-windows\WPFAppConverter.genruntimeconfig.cache
 C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-windows\ref\WPFAppConverter.dll
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-windows\Resource\Icon\IconSVG.baml
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Pages\AnaliticPage.g.cs
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Pages\HomePage.g.cs
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Pages\SettingPage.g.cs
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Pages\AnaliticPage.baml
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Pages\HomePage.baml
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Pages\SettingPage.baml

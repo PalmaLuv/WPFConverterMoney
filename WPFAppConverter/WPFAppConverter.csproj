@@ -12,4 +12,8 @@
     <None Remove="MVVM\View\Window\2sxmrryk.blz~" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Resource\Image\" />
+  </ItemGroup>
+
 </Project>

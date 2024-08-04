@@ -2,6 +2,11 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <!-- LithApplication -->
 
+    <!-- Connecting svg file -->
+    <ResourceDictionary.MergedDictionaries> 
+        <ResourceDictionary Source="/Resource/Icon/IconSVG.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
     <SolidColorBrush x:Key="NoTrigersHeaderButton" Color="Transparent"/>
     <SolidColorBrush x:Key="TrigerHeaderButton" Color="#262626"/>
     <SolidColorBrush x:Key="TrigerHeaderButton--exit" Color="Red"/>
@@ -65,21 +70,42 @@
     </Style>
 
     <Style x:Key="MainNavPanel_RadioButton" TargetType="RadioButton">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Opacity" Value="0.85"/>
+            </Trigger>
+        </Style.Triggers>
+        
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="RadioButton">
-                    <Border Padding="10, 5" Background="{StaticResource RadioButtonBackground-static}">
-                        <Label Content="{TemplateBinding Content}" Foreground="{StaticResource RaidoButtonForeground}"/>
+                    <Border Padding="10" Background="{StaticResource RadioButtonBackground-static}"
+                            Tag="{TemplateBinding Tag}" Margin="5" CornerRadius="15" Cursor="Hand"
+                            Opacity="{TemplateBinding Opacity}">
+                        <Image x:Name="IconImage" Width="25">
+                            <Image.Style>
+                                <Style TargetType="Image">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource AncestorType=Border}}" Value="Analitic">
+                                            <Setter Property="Source" Value="{StaticResource courseIcon-white}"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource AncestorType=Border}}" Value="Home">
+                                            <Setter Property="Source" Value="{StaticResource homeIcon-white}"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource AncestorType=Border}}" Value="Setting">
+                                            <Setter Property="Source" Value="{StaticResource settingIcon-white}"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Image.Style>
+                        </Image>
+
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="10" 
+                                           ShadowDepth="0" 
+                                           Color="Black"/>
+                        </Border.Effect>
                     </Border>
-                    
-                    <!--<Border Padding="10, 5" Background="{StaticResource RadioButtonBackground-static}">
-                        <Label Content="{TemplateBinding Content}" Foreground="{StaticResource RaidoButtonForeground}"/>
-                        <Border.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="{StaticResource RadioButtonBackground-active}"/>
-                            </Trigger>
-                        </Border.Triggers>
-                    </Border>-->
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
