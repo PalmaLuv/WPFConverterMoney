@@ -10,6 +10,9 @@
     <Compile Update="MVVM\View\Pages\AnaliticPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MVVM\View\Pages\CurrencyPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MVVM\View\Pages\HomePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,6 +22,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="MVVM\View\Pages\AnaliticPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\Pages\CurrencyPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\Pages\HomePage.xaml">

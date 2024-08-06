@@ -1,11 +1,4 @@
-﻿using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WPFAppConverter.Core;
+﻿using WPFAppConverter.Core;
 using WPFAppConverter.MVVM.ViewModel.Pages;
 
 namespace WPFAppConverter.MVVM.ViewModel
@@ -13,17 +6,17 @@ namespace WPFAppConverter.MVVM.ViewModel
     public class CurrentViewModel : ObservableObject
     {
         #region model switch command.
-        public RelayCommand HomeCommand         { get; set; }
-        public RelayCommand AnaliticCommand     { get; set; }
-        public RelayCommand SettingCommand      { get; set; }
-        
-        public RelayCommand LastPageCommand     { get; set; }
+        public RelayCommand HomeCommand { get; set; }
+        public RelayCommand AnaliticCommand { get; set; }
+        public RelayCommand SettingCommand { get; set; }
+
+        public RelayCommand LastPageCommand { get; set; }
         #endregion
 
         #region view model.
-        public HomeModel HomeVM         { get; set; }
+        public HomeModel HomeVM { get; set; }
         public AnaliticModel AnaliticVM { get; set; }
-        public SettingModel SettingVM   { get; set; }
+        public SettingModel SettingVM { get; set; }
         #endregion
 
         /* last view page */
@@ -51,17 +44,17 @@ namespace WPFAppConverter.MVVM.ViewModel
         public CurrentViewModel()
         {
             /* Intialization model */
-            HomeVM      = new HomeModel();
-            AnaliticVM  = new AnaliticModel();
-            SettingVM   = new SettingModel();
+            HomeVM = new HomeModel();
+            AnaliticVM = new AnaliticModel();
+            SettingVM = new SettingModel();
 
             this.CurrentView = this.HomeVM;
 
             /* Реалізація команд перемикання сторінок (навігації) */
-            LastPageCommand     = new RelayCommand(o => { CurrentView = LastView; });
-            HomeCommand         = new RelayCommand(o => { CurrentView = HomeVM; });
-            AnaliticCommand     = new RelayCommand(o => { CurrentView = AnaliticVM; });
-            SettingCommand      = new RelayCommand(o => { CurrentView = SettingVM; });
+            LastPageCommand = new RelayCommand(o => { CurrentView = LastView; });
+            HomeCommand = new RelayCommand(o => { CurrentView = HomeVM; });
+            AnaliticCommand = new RelayCommand(o => { CurrentView = AnaliticVM; });
+            SettingCommand = new RelayCommand(o => { CurrentView = SettingVM; });
         }
     }
 }

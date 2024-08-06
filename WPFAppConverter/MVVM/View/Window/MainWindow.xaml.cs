@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Input;
+using WPFAppConverter.Core.CoinAnalitic;
 
 namespace WPFAppConverter
 {
@@ -38,5 +39,6 @@ namespace WPFAppConverter
         private void Minimazation(object sender, RoutedEventArgs e) =>                                // Min size mainWindow
             Application.Current.MainWindow.WindowState = WindowState.Minimized;
         #endregion
+
     }
 }

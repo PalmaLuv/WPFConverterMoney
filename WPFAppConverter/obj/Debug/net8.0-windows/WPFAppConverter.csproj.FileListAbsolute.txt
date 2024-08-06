@@ -31,3 +31,5 @@ C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-win
 C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-windows\WPFAppConverter.csproj.AssemblyReference.cache
 C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
 C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-windows\WPFAppCo.5E1A344F.Up2Date
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Pages\CurrencyPage.g.cs
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Pages\CurrencyPage.baml

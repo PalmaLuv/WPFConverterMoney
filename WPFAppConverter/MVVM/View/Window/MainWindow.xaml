@@ -44,19 +44,19 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="50"/>
                     </Grid.RowDefinitions>
-                    
+
                     <StackPanel>
                         <RadioButton Style="{StaticResource MainNavPanel_RadioButton}" Tag="Home"
                                      Command="{Binding HomeCommand}"/>
                         <RadioButton Style="{StaticResource MainNavPanel_RadioButton}" Tag="Analitic"
                                      Command="{Binding AnaliticCommand}"/>
-                    
+
                     </StackPanel>
                     <RadioButton Style="{StaticResource MainNavPanel_RadioButton}" Tag="Setting"
                                  Command="{Binding SettingCommand}" Grid.Row="1"/>
                 </Grid>
-                
-                
+
+
             </Border>
 
             <!-- Holst page -->

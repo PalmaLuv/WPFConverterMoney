@@ -6,9 +6,21 @@
       xmlns:local="clr-namespace:WPFAppConverter.MVVM.View.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="HomePage">
+      Title="HomePage" Loaded="LoadingPage" DataContext="{StaticResource currentViewModel}">
 
     <Grid>
-        <Button Width="150" Height="30" Click="Button_Click"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Margin="30 10">
+            <StackPanel> 
+                <DataGrid x:Name="top_assets" AutoGenerateColumns="False" Height="200"/>
+                <!-- get table information assets -->
+                <Button Content="View All" Command="{Binding AnaliticCommand}" Style="{StaticResource ViewAllButton-home}"/>
+            </StackPanel>
+        </Border>
+
     </Grid>
 </Page>
