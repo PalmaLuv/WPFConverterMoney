@@ -4,7 +4,7 @@ using System.Windows;
 
 namespace WPFAppConverter.Core.CoinAnalitic
 {
-    class CoinCap
+    class CoinCap : ObservableObject
     {
         private static readonly HttpClient _client = new HttpClient
         { BaseAddress = new Uri("https://api.coincap.io") };

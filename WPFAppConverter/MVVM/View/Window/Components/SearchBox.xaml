@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="WPFAppConverter.MVVM.View.Window.Components.SearchPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFAppConverter.MVVM.View.Window.Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="200">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <Image Width="50"/>
+            <TextBox  MinWidth="150">
+                <TextBox.Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="TextBox">
+                                    <Border CornerRadius="15" Background="{TemplateBinding Background}" Margin="3,10,3,10">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
+        </StackPanel>    
+    </Grid>
+</UserControl>

@@ -13,17 +13,12 @@ namespace WPFAppConverter
         public MainWindow()
         {
             InitializeComponent();
-
-            //DataContext = this;
-
-            TitleMainWindow = "Converter";
         }
 
         public void LoadingMainWindow(object sender, RoutedEventArgs e)
         {
             //Loading Forms 
         }
-
 
         #region header button func.
         private void HeaderMouse(object sender, MouseButtonEventArgs e) // Moving mainWindow

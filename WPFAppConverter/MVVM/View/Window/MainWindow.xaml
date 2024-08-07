@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPFAppConverter"
         xmlns:viewModel="clr-namespace:WPFAppConverter.MVVM.ViewModel"
         mc:Ignorable="d" DataContext="{StaticResource currentViewModel}"
-        Title="{Binding TitleMainWindow}" Height="450" Width="800" Loaded="LoadingMainWindow" 
+        Title="{StaticResource TitleForms}" Height="450" Width="800" Loaded="LoadingMainWindow" 
         WindowStyle="None" AllowsTransparency="True" Background="{StaticResource MainBackgroung}">
     <Grid>
         <Grid.RowDefinitions>
@@ -17,7 +17,7 @@
         <!-- Header -->
         <Border Style="{StaticResource WindowBorderHeaderStyle}" MouseDown="HeaderMouse">
             <Grid>
-                <Label Content="{Binding TitleMainWindow}" VerticalAlignment="Center" 
+                <Label Content="{StaticResource TitleForms}" VerticalAlignment="Center" 
                        Style="{StaticResource WindowLableHeaderStyle}" Margin="0, -12"/>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
                     <Button Height="Auto" Width="25" Style="{StaticResource HeaderButton}" Content="_"
@@ -60,7 +60,7 @@
             </Border>
 
             <!-- Holst page -->
-            <Frame Grid.Column="1" Content="{Binding CurrentView}"/> 
+            <Frame Grid.Column="1" Content="{Binding CurrentView}" NavigationUIVisibility="Hidden"/> 
         </Grid>
     </Grid>
 </Window>

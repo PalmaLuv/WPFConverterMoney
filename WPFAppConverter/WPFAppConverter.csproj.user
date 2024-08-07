@@ -19,6 +19,9 @@
     <Compile Update="MVVM\View\Pages\SettingPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MVVM\View\Window\Components\SearchBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MVVM\View\Pages\AnaliticPage.xaml">
@@ -31,6 +34,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\Pages\SettingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\Window\Components\SearchBox.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\Window\MainWindow.xaml">

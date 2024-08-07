@@ -5,6 +5,8 @@
              xmlns:view_Pages="clr-namespace:WPFAppConverter.MVVM.View.Pages"
              xmlns:viewModel_Pages="clr-namespace:WPFAppConverter.MVVM.ViewModel.Pages"
              xmlns:viewModel="clr-namespace:WPFAppConverter.MVVM.ViewModel"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:coin="clr-namespace:WPFAppConverter.Core.CoinAnalitic"
              StartupUri="MVVM/View/Window/MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
@@ -12,6 +14,11 @@
                 <ResourceDictionary Source="MVVM/View/Window/Style/ApplicationStyle.ligth.xaml"/>
 
                 <ResourceDictionary>
+                    <system:String x:Key="TitleForms">Converter Money</system:String>
+                    
+                    <!-- Global variable for convenient work with it -->
+                    <coin:CoinCap x:Key="coinCap"/> 
+                    
                     <viewModel:CurrentViewModel x:Key="currentViewModel"/>
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>

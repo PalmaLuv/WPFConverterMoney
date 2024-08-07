@@ -1,6 +1,5 @@
-﻿using System.Configuration;
-using System.Data;
-using System.Windows;
+﻿using System.Windows;
+using WPFAppConverter.Core.CoinAnalitic;
 
 namespace WPFAppConverter
 {
@@ -9,6 +8,13 @@ namespace WPFAppConverter
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            // Setting the Title of the programme from the parameters
+            this.Resources["TitleForms"] = WPFAppConverter.Properties.Settings.Default.TitleName;
+        }
     }
 
 }

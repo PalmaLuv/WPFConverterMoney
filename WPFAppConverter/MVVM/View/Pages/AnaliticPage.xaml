@@ -4,11 +4,23 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WPFAppConverter.MVVM.View.Pages"
+      xmlns:component="clr-namespace:WPFAppConverter.MVVM.View.Window.Components"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="AnaliticPage">
+      Title="AnaliticPage" Loaded="LoadingPage">
 
     <Grid>
-        <Label VerticalAlignment="Center" HorizontalAlignment="Center" Content="AnaliticPage" FontSize="24"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+            <component:SearchBox/>
+        </StackPanel>
+        
+        <DataGrid Grid.Row="1" Margin="30,0,30,20" x:Name="allCrypto" AutoGenerateColumns="False">
+            
+        </DataGrid>
     </Grid>
 </Page>

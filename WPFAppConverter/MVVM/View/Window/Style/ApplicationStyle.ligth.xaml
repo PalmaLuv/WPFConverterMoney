@@ -29,12 +29,18 @@
     <SolidColorBrush x:Key="StandardBrush" Color="#1F1F1F" />
     <SolidColorBrush x:Key="ThumbColor" Color="#5A5A5A" />
     <SolidColorBrush x:Key="BackgroundScroll" Color="#3F3F3F" />
+    
+    <!-- DataGrid Color -->
+    <SolidColorBrush x:Key="BorderDataGrid" Color="#FFA5A5A5"/>
+    <SolidColorBrush x:Key="BorderColummnDataGrid" Color="#DDDDDD"/>
+    <SolidColorBrush x:Key="DataGridColorColumnHeader" Color="#414141"/>
 
     <!-- Header -->
     <Style x:Key="WindowBorderHeaderStyle" TargetType="Border">
         <Setter Property="Background" Value="{StaticResource HeaderPanel}"/>
     </Style>
 
+    <!-- Title WindowForms -->
     <Style x:Key="WindowLableHeaderStyle" TargetType="Label">
         <Setter Property="Foreground" Value="{StaticResource HeaderText--title}"/>
         <Setter Property="FontSize" Value="15"/>
@@ -138,9 +144,87 @@
         </Setter>
     </Style>
 
-    <!--<Style TargetType="DataGrid">
+    <Style TargetType="DataGrid">
+        <!-- Make the border and grid lines a little less imposing -->
+        <Setter Property="BorderBrush" Value="{StaticResource BorderDataGrid}" />
+        <Setter Property="HorizontalGridLinesBrush" Value="{StaticResource BorderColummnDataGrid}" />
+        <Setter Property="VerticalGridLinesBrush" Value="{StaticResource BorderColummnDataGrid}" />
 
-    </Style> -->
+        <!-- Disable functions we don't need -->
+        <Setter Property="IsReadOnly" Value="True"/>
+        <Setter Property="CanUserAddRows" Value="False"/>
+        <Setter Property="CanUserDeleteRows" Value="False"/>
+        <Setter Property="CanUserSortColumns" Value="False"/>
+        <Setter Property="CanUserResizeRows" Value="False"/>
+        <Setter Property="CanUserResizeColumns" Value="False"/>
+        
+
+        <Setter Property="ColumnHeaderStyle">
+            <Setter.Value>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Background" Value="{StaticResource DataGridColorColumnHeader}"/>
+                    <Setter Property="Foreground" Value="{StaticResource HeaderText}"/>
+                    <Setter Property="FontWeight" Value="ExtraLight"/>
+                    <Setter Property="Padding" Value="4"/>
+                </Style>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="RowStyle">
+            <Setter.Value>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <!-- Highlight a grid row as the mouse passes over -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="LightCyan" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="CellStyle">
+            <Setter.Value>
+                <Style TargetType="DataGridCell">
+                    <Style.Triggers>
+                        <!-- Highlight selected rows -->
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="#ff66ccff" />
+                            <Setter Property="BorderBrush" Value="Transparent" />
+                            <Setter Property="Foreground" Value="Black" />
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Background" Value="#ff66ccff" />
+                            <Setter Property="BorderBrush" Value="Black" />
+                            <Setter Property="BorderThickness" Value="1"/>
+                            <Setter Property="Foreground" Value="Black" />
+                        </Trigger>
+                    </Style.Triggers>
+                    <!-- Add some padding around the contents of a cell -->
+                    <Setter Property="Padding" Value="4,3,4,3" />
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="DataGridCell">
+                                <Border Padding="{TemplateBinding Padding}" 
+                                            BorderBrush="{TemplateBinding BorderBrush}"
+                                            BorderThickness="{TemplateBinding BorderThickness}"
+                                            Background="{TemplateBinding Background}">
+                                    <ContentPresenter />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="FocusVisualStyle">
+                        <Setter.Value>
+                            <Style TargetType="Control">
+                                <Setter Property="BorderBrush" Value="Transparent" />
+                            </Style>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
     <!-- RepeatButton for scrolling -->
     <Style x:Key="ScrollButtons" TargetType="{x:Type RepeatButton}">

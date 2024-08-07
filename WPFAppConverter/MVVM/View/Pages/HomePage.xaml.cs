@@ -1,21 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
-using System.Collections.ObjectModel;
 using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
 using WPFAppConverter.Core.CoinAnalitic;
+using WPFAppConverter.Core.ConverterNumber;
 
 namespace WPFAppConverter.MVVM.View.Pages
 {
@@ -24,28 +12,29 @@ namespace WPFAppConverter.MVVM.View.Pages
     /// </summary>
     public partial class HomePage : Page
     {
-        private static CoinCap _coin = new CoinCap();
+
+        private CoinCap _coinCap;
 
         public HomePage()
         {
             InitializeComponent();
+
+            // Initialization coinCap
+            _coinCap = (CoinCap)Application.Current.Resources["coinCap"];
         }
 
         private async void LoadingPage(object sender, RoutedEventArgs e)
         {
-            Dictionary<string, CoinStruct> coinList = await _coin.GetAssetsAll("?limit=10");
-            var columns = new List<(string Header, string BindingPath)>
+            Dictionary<string, CoinStruct> coinList = await _coinCap.GetAssetsAll("?limit=10");
+            var columns = new List<(string Header, string BindingPath)> // Columnns name
             {
                 ("Rank", "rank"),
                 ("Symbol", "symbol"),
                 ("Name", "name"),
-                ("Supply", "supply"),
-                ("Max Supply", "maxSupply"),
-                //("Market Cap (USD)", "marketCapUsd"),
-                //("24h Volume (USD)", "volumeUsd24Hr"),
-                //("Price (USD)", "priceUsd"),
-                //("Change % (24h)", "changePercent24Hr"),
-                //("VWAP (24h)", "vwap24Hr")
+                ("24h Volume (USD)", "volumeUsd24Hr"),
+                ("Price (USD)", "priceUsd"),
+                ("Change % (24h)", "changePercent24Hr"),
+                ("VWAP (24h)", "vwap24Hr")
             };
 
             foreach (var column in columns)
@@ -54,6 +43,7 @@ namespace WPFAppConverter.MVVM.View.Pages
                 {
                     Header = column.Header,
                     Binding = new Binding(column.BindingPath)
+                    { Converter = new DecimalFormatConverter() }
                 });
             }
 
