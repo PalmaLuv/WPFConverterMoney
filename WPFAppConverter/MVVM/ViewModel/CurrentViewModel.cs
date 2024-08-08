@@ -1,4 +1,5 @@
 ﻿using WPFAppConverter.Core;
+using WPFAppConverter.Core.CoinAnalitic;
 using WPFAppConverter.MVVM.ViewModel.Pages;
 
 namespace WPFAppConverter.MVVM.ViewModel
@@ -10,13 +11,16 @@ namespace WPFAppConverter.MVVM.ViewModel
         public RelayCommand AnaliticCommand { get; set; }
         public RelayCommand SettingCommand { get; set; }
 
+        public RelayCommand CurrencyCommand { get; set; }
+
         public RelayCommand LastPageCommand { get; set; }
         #endregion
 
         #region view model.
-        public HomeModel HomeVM { get; set; }
-        public AnaliticModel AnaliticVM { get; set; }
-        public SettingModel SettingVM { get; set; }
+        public HomeModel HomeVM             { get; set; }
+        public AnaliticModel AnaliticVM     { get; set; }
+        public SettingModel SettingVM       { get; set; }
+        public CurrencyModel CurrencyVM     { get; set; }
         #endregion
 
         /* last view page */
@@ -55,6 +59,17 @@ namespace WPFAppConverter.MVVM.ViewModel
             HomeCommand = new RelayCommand(o => { CurrentView = HomeVM; });
             AnaliticCommand = new RelayCommand(o => { CurrentView = AnaliticVM; });
             SettingCommand = new RelayCommand(o => { CurrentView = SettingVM; });
+
+            CurrencyCommand = new RelayCommand(
+                    param =>
+                    {
+                        if (param is CoinStruct _coin)
+                        {
+                            CurrencyVM = new CurrencyModel { Coin = _coin };
+                            CurrentView = CurrencyVM;
+                        }
+                    }
+                );
         }
     }
 }

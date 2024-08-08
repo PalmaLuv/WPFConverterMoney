@@ -32,6 +32,9 @@
             <DataTemplate DataType="{x:Type viewModel_Pages:SettingModel}">
                 <view_Pages:SettingPage/>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel_Pages:CurrencyModel}">
+                <view_Pages:CurrencyPage/>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

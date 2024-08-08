@@ -34,7 +34,8 @@ namespace WPFAppConverter.MVVM.View.Pages
                 ("24h Volume (USD)", "volumeUsd24Hr"),
                 ("Price (USD)", "priceUsd"),
                 ("Change % (24h)", "changePercent24Hr"),
-                ("VWAP (24h)", "vwap24Hr")
+                ("VWAP (24h)", "vwap24Hr"),
+                ("", "view_page")
             };
 
             foreach (var column in columns)

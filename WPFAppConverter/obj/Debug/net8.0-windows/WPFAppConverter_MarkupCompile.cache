@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\App.xaml
-7-2097667437
+8806728054
 
-17-1613680552
-1991550464279
-MVVM\View\Pages\AnaliticPage.xaml;MVVM\View\Pages\CurrencyPage.xaml;MVVM\View\Pages\HomePage.xaml;MVVM\View\Pages\SettingPage.xaml;MVVM\View\Window\MainWindow.xaml;MVVM\View\Window\Style\ApplicationStyle.ligth.xaml;Resource\Icon\IconSVG.xaml;
+20-2047407904
+2151266185176
+MVVM\View\Pages\AnaliticPage.xaml;MVVM\View\Pages\CurrencyPage.xaml;MVVM\View\Pages\HomePage.xaml;MVVM\View\Pages\SettingPage.xaml;MVVM\View\Window\Components\SearchBox.xaml;MVVM\View\Window\MainWindow.xaml;MVVM\View\Window\Style\ApplicationStyle.ligth.xaml;Resource\Icon\IconSVG.xaml;
 
 False
 

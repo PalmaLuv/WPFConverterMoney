@@ -71,6 +71,41 @@ namespace WPFAppConverter.Core.CoinAnalitic
             return result;
         }
 
+        /// <summary>
+        /// Candles 
+        /// </summary>
+        /// <param name="id">quoteID</param>
+        /// <param name="exchange">marketID</param>
+        /// <param name="interval">intervar = [ m1, m5, m15, m30, h1, h2, h6, h12, d1 ]</param>
+        /// <param name="baseId">coinId</param>
+        /// <returns></returns>
+        public async Task<List<CoinStructCandles>> GetCandles(string id, string exchange, string interval, string baseId)
+        {
+            var result = new List<CoinStructCandles>();
+            try
+            {
+                var request = new HttpRequestMessage(HttpMethod.Get, $"/v2/candles?exchange={exchange.ToLower()}&interval={interval.ToLower()}" +
+                    $"&baseId={baseId.ToLower()}&quoteId={id.ToLower()}");
+                var response = await _client.SendAsync(request);
+                response.EnsureSuccessStatusCode();
+
+                var jsonObject = JObject.Parse(await response.Content.ReadAsStringAsync());
+                var dataArray = jsonObject["data"] as JArray;
+                if (dataArray != null)
+                    foreach (var item in dataArray)
+                        result.Add(item.ToObject<CoinStructCandles>());
+            }
+            catch (HttpRequestException e)
+            {
+                HandleException(e);
+            }
+            catch (Exception e)
+            {
+                HandleException(e);
+            }
+            return result;
+        }
+
         public async Task<Dictionary<string, CoinStruct>> GetAssetsAll(string option = "")
         {
             var result = new Dictionary<string, CoinStruct>();

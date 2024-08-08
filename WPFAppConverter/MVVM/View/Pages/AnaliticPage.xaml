@@ -15,10 +15,11 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
-            <component:SearchBox/>
+        <Button x:Name="ButtonTest" Width="100"/>
+        <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Margin="30,0">
+            <component:SearchBox Height="50" TextChanged="SearchTextChanged"/>
         </StackPanel>
-        
+
         <DataGrid Grid.Row="1" Margin="30,0,30,20" x:Name="allCrypto" AutoGenerateColumns="False">
             
         </DataGrid>

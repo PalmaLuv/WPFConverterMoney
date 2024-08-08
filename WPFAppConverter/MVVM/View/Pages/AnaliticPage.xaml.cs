@@ -1,9 +1,13 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using WPFAppConverter.Core.CoinAnalitic;
 using WPFAppConverter.Core.ConverterNumber;
+using WPFAppConverter.MVVM.View.Window.Components;
+using WPFAppConverter.MVVM.ViewModel;
 
 namespace WPFAppConverter.MVVM.View.Pages
 {
@@ -13,6 +17,9 @@ namespace WPFAppConverter.MVVM.View.Pages
     public partial class AnaliticPage : Page
     {
         private CoinCap _coinCap;
+        private Dictionary<string, CoinStruct> _dictionaryCoin;
+        private ObservableCollection<CoinStruct> _coins;
+        private ICollectionView _dataView;
 
         public AnaliticPage()
         {
@@ -24,8 +31,10 @@ namespace WPFAppConverter.MVVM.View.Pages
 
         private async void LoadingPage(object sender, RoutedEventArgs e)
         {
-            Dictionary<string, CoinStruct> value =  await _coinCap.GetAssetsAll();
-            this.allCrypto.ItemsSource = new ObservableCollection<CoinStruct>(value.Values);
+            _dictionaryCoin = await _coinCap.GetAssetsAll();
+            _coins = new ObservableCollection<CoinStruct>(_dictionaryCoin.Values);
+            _dataView = CollectionViewSource.GetDefaultView(_coins);
+            this.allCrypto.ItemsSource = _dataView;
 
             var columns = new List<(string Header, string BindingPath)> // Columnns name
             {
@@ -48,6 +57,27 @@ namespace WPFAppConverter.MVVM.View.Pages
                 });
             }
 
+            // ---- TEST ----
+            var _curr = Application.Current.Resources["currentViewModel"] as CurrentViewModel;
+            ButtonTest.Command = _curr.CurrencyCommand;
+            CoinStruct _coin = _dictionaryCoin["bitcoin"];
+            ButtonTest.CommandParameter = _coin;
+        }
+
+        // Search func [Name]
+        private void SearchTextChanged(object sender, RoutedEventArgs e)
+        {
+            if (sender is SearchBox _search)
+            {
+                _dataView.Filter = item =>
+                {
+                    if (string.IsNullOrEmpty(_search.Text))
+                        return true;
+
+                    var keyValuePair = (CoinStruct)item;
+                    return keyValuePair.name.IndexOf(_search.Text, StringComparison.OrdinalIgnoreCase) >= 0;
+                };
+            }
         }
     }
 }

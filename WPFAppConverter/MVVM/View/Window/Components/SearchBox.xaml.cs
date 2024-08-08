@@ -1,31 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 
 namespace WPFAppConverter.MVVM.View.Window.Components
 {
-    /// <summary>
-    /// Логика взаимодействия для SearchPanel.xaml
-    /// </summary>
-    public partial class SearchPanel : UserControl
+    public partial class SearchBox : UserControl
     {
-        public string Wotermark
+        // Define the TextChanged event
+        public event RoutedEventHandler TextChanged;
+
+        private string _wotermark = "Search...";
+
+        public string Wotermark { get { return _wotermark; } private set { _wotermark = value; } }
+
+        // Expand the Text property to make it easier to access it
+        public string Text
         {
-            get { return (string)GetValue(WotermarkProperty); }
-            set { SetValue(WotermarkProperty, value); }
+            get => PART_TextBox.Text;
+            set => PART_TextBox.Text = value;
         }
 
-        public static readonly DependencyProperty WotermarkProperty =
-            DependencyProperty.Register("Wotermark", typeof(string), typeof(SearchPanel), new PropertyMetadata(string.Empty));
-
-        public SearchPanel()
+        public SearchBox()
         {
             InitializeComponent();
             DataContext = this;
+        }
+
+        private void PART_TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (sender is TextBox search)
+                if (string.IsNullOrEmpty(search.Text))
+                    search.Tag = Wotermark;
+                else
+                    search.Tag = null;
+
+            TextChanged?.Invoke(this, new RoutedEventArgs());
         }
     }
 }
