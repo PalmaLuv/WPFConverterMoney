@@ -1,4 +1,5 @@
 ﻿using WPFAppConverter.Core;
+using WPFAppConverter.Core.CoinAnalitic;
 using WPFAppConverter.MVVM.ViewModel.Pages;
 
 namespace WPFAppConverter.MVVM.ViewModel
@@ -9,14 +10,19 @@ namespace WPFAppConverter.MVVM.ViewModel
         public RelayCommand HomeCommand { get; set; }
         public RelayCommand AnaliticCommand { get; set; }
         public RelayCommand SettingCommand { get; set; }
+        public RelayCommand ConvertCommand { get; set; }
+
+        public RelayCommand CurrencyCommand { get; set; }
 
         public RelayCommand LastPageCommand { get; set; }
         #endregion
 
         #region view model.
-        public HomeModel HomeVM { get; set; }
-        public AnaliticModel AnaliticVM { get; set; }
-        public SettingModel SettingVM { get; set; }
+        public HomeModel HomeVM             { get; set; }
+        public AnaliticModel AnaliticVM     { get; set; }
+        public SettingModel SettingVM       { get; set; }
+        public CurrencyModel CurrencyVM     { get; set; }
+        public ConvertModel ConvertVM       { get; set; }
         #endregion
 
         /* last view page */
@@ -47,6 +53,7 @@ namespace WPFAppConverter.MVVM.ViewModel
             HomeVM = new HomeModel();
             AnaliticVM = new AnaliticModel();
             SettingVM = new SettingModel();
+            ConvertVM = new ConvertModel();
 
             this.CurrentView = this.HomeVM;
 
@@ -55,6 +62,18 @@ namespace WPFAppConverter.MVVM.ViewModel
             HomeCommand = new RelayCommand(o => { CurrentView = HomeVM; });
             AnaliticCommand = new RelayCommand(o => { CurrentView = AnaliticVM; });
             SettingCommand = new RelayCommand(o => { CurrentView = SettingVM; });
+            ConvertCommand = new RelayCommand(o => { CurrentView = ConvertVM; });
+
+            CurrencyCommand = new RelayCommand(
+                    param =>
+                    {
+                        if (param is CoinStruct _coin)
+                        {
+                            CurrencyVM = new CurrencyModel { Coin = _coin };
+                            CurrentView = CurrencyVM;
+                        }
+                    }
+                );
         }
     }
 }

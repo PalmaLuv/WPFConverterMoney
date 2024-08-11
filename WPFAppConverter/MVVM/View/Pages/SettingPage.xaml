@@ -6,9 +6,16 @@
       xmlns:local="clr-namespace:WPFAppConverter.MVVM.View.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="SettingPage">
+      Title="SettingPage" Loaded="LoadingPage">
 
-    <Grid>
-        <Label VerticalAlignment="Center" HorizontalAlignment="Center" Content="SettingPage" FontSize="24"/>
+    <Grid >
+        <StackPanel Orientation="Horizontal" Height="25" VerticalAlignment="Top" Margin="20">
+            <Label Content="Theme"/>
+            <ComboBox x:Name="ComboTheme" Width="150" Margin="10,0">
+                <ComboBoxItem>Light</ComboBoxItem>
+                <ComboBoxItem>Dark</ComboBoxItem>
+            </ComboBox>
+            <Button Click="ApplyThemeButtonClick" Content="Apply" Width="100" FontSize="10"/>
+        </StackPanel>
     </Grid>
 </Page>

@@ -6,8 +6,10 @@
         xmlns:local="clr-namespace:WPFAppConverter"
         xmlns:viewModel="clr-namespace:WPFAppConverter.MVVM.ViewModel"
         mc:Ignorable="d" DataContext="{StaticResource currentViewModel}"
-        Title="{Binding TitleMainWindow}" Height="450" Width="800" Loaded="LoadingMainWindow" 
-        WindowStyle="None" AllowsTransparency="True" Background="{StaticResource MainBackgroung}">
+        Title="{StaticResource TitleForms}" Height="450" Width="800" Loaded="LoadingMainWindow" 
+        WindowStyle="None" AllowsTransparency="True" Background="{DynamicResource MainBackgroung}"
+        SourceInitialized="Window_OnSourceInitialized" SizeChanged="Window_OnSizeChanged"
+        PreviewMouseMove="Window_OnPreviewMouseMove" MinWidth="750" MinHeight="400">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
@@ -15,16 +17,16 @@
         </Grid.RowDefinitions>
 
         <!-- Header -->
-        <Border Style="{StaticResource WindowBorderHeaderStyle}" MouseDown="HeaderMouse">
+        <Border Style="{DynamicResource WindowBorderHeaderStyle}" MouseDown="HeaderMouse">
             <Grid>
-                <Label Content="{Binding TitleMainWindow}" VerticalAlignment="Center" 
-                       Style="{StaticResource WindowLableHeaderStyle}" Margin="0, -12"/>
+                <Label Content="{StaticResource TitleForms}" VerticalAlignment="Center" 
+                       Style="{DynamicResource WindowLableHeaderStyle}" Margin="0, -12"/>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-                    <Button Height="Auto" Width="25" Style="{StaticResource HeaderButton}" Content="_"
+                    <Button Height="Auto" Width="25" Style="{DynamicResource HeaderButton}" Content="_"
                             Click="Minimazation"/>
-                    <Button Height="Auto" Width="25" Style="{StaticResource HeaderButton}" Content="[]"
+                    <Button Height="Auto" Width="25" Style="{DynamicResource HeaderButton}" Content="[]"
                             Click="Maximization"/> <!-- TODO : Знайти нормальні іконки -->
-                    <Button Height="Auto" Width="40" Style="{StaticResource HeaderButton}" Content="⨉" FontSize="16" Name="Exit"
+                    <Button Height="Auto" Width="40" Style="{DynamicResource HeaderButton}" Content="⨉" FontSize="16" Name="Exit"
                             Click="WindowClose"/>
                 </StackPanel>
             </Grid>
@@ -38,7 +40,7 @@
             </Grid.ColumnDefinitions>
 
             <!-- Navigation -->
-            <Border Style="{StaticResource LeftNavPanel}">
+            <Border Style="{DynamicResource LeftNavPanel}">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
@@ -46,21 +48,37 @@
                     </Grid.RowDefinitions>
 
                     <StackPanel>
-                        <RadioButton Style="{StaticResource MainNavPanel_RadioButton}" Tag="Home"
+                        <RadioButton Style="{DynamicResource MainNavPanel_RadioButton}" Tag="Home"
                                      Command="{Binding HomeCommand}"/>
-                        <RadioButton Style="{StaticResource MainNavPanel_RadioButton}" Tag="Analitic"
+                        <Separator Margin="10,5"/>
+                        <RadioButton Style="{DynamicResource MainNavPanel_RadioButton}" Tag="Analitic"
                                      Command="{Binding AnaliticCommand}"/>
-
+                        <RadioButton Style="{DynamicResource MainNavPanel_RadioButton}" Tag="Convert"
+                                     Command="{Binding ConvertCommand}"/>
+                        <Separator Margin="10,5"/>
                     </StackPanel>
-                    <RadioButton Style="{StaticResource MainNavPanel_RadioButton}" Tag="Setting"
+                    <RadioButton Style="{DynamicResource MainNavPanel_RadioButton}" Tag="Setting"
                                  Command="{Binding SettingCommand}" Grid.Row="1"/>
                 </Grid>
-
-
             </Border>
 
             <!-- Holst page -->
-            <Frame Grid.Column="1" Content="{Binding CurrentView}"/> 
+            <Frame Grid.Column="1" Content="{Binding CurrentView}" NavigationUIVisibility="Hidden"/> 
+        </Grid>
+
+        <!-- Functionality of resizing the mold -->
+        <Grid Grid.Row="1" Opacity="0.1">
+            <Rectangle Height="4" Width="4" x:Name="WindowResizeBottomLeft" PreviewMouseDown="WindowResize_OnPreviewMouseDown"
+                   Stroke="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Cursor="SizeNESW"/>
+            <Rectangle Height="4" Width="4" x:Name="WindowResizeBottomRight" PreviewMouseDown="WindowResize_OnPreviewMouseDown"
+                   Stroke="{x:Null}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Cursor="SizeNWSE"/>
+
+            <Rectangle Width="2" x:Name="WindowResizeLeft" PreviewMouseDown="WindowResize_OnPreviewMouseDown" Fill="#FFF"
+                   Stroke="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Cursor="SizeWE"/>
+            <Rectangle Width="2" x:Name="WindowResizeRight" PreviewMouseDown="WindowResize_OnPreviewMouseDown" Fill="#FFF"
+                   Stroke="{x:Null}" HorizontalAlignment="Right" VerticalAlignment="Stretch" Cursor="SizeWE"/>
+            <Rectangle Height="2" x:Name="WindowResizeBottom" PreviewMouseDown="WindowResize_OnPreviewMouseDown" Fill="#FFF"
+                   Stroke="{x:Null}" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Cursor="SizeNS"/>
         </Grid>
     </Grid>
 </Window>

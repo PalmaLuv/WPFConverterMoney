@@ -1,20 +1,31 @@
-﻿using Newtonsoft.Json.Linq;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Windows;
+using Newtonsoft.Json.Linq;
 
 namespace WPFAppConverter.Core.CoinAnalitic
 {
     class CoinCap
     {
+        // Creating and configuring HttpClient to execute HTTP requests
+        // Set the base address for all requests made by this HttpClient instance
+        // All relative URLs in requests will be automatically appended with this base address
         private static readonly HttpClient _client = new HttpClient
         { BaseAddress = new Uri("https://api.coincap.io") };
 
-        public async Task<Dictionary<string, CoinStructMarkets>> GetElementMarkets(string id)
+        /// <summary>
+        /// GET /assets/{{id}}/ markets
+        /// </summary>
+        /// <param name="id">asset id</param>
+        /// <param name="option">
+        ///     limit - max limit of 2000
+        ///     offset - offset
+        /// </param>
+        public async Task<Dictionary<string, CoinStructMarkets>> GetElementMarkets(string id, string option = "")
         {
             var result = new Dictionary<string, CoinStructMarkets>();
             try
             {
-                var request = new HttpRequestMessage(HttpMethod.Get, $"/v2/assets/{id.ToLower()}/marjets")
+                var request = new HttpRequestMessage(HttpMethod.Get, $"/v2/assets/{id.ToLower()}/markets" + option)
                 { Content = new StringContent("", null, "text/paint") };
                 var response = await _client.SendAsync(request);
                 response.EnsureSuccessStatusCode();
@@ -41,16 +52,19 @@ namespace WPFAppConverter.Core.CoinAnalitic
         }
 
         /// <summary>
-        /// History assets
+        /// GET /assets/{{id}}/ history
         /// </summary>
         /// <param name="id">assets id</param>
         /// <param name="interval">intervar = [ m1, m5, m15, m30, h1, h2, h6, h12, d1 ]</param>
-        public async Task<List<CoinStructHistory>> GetHistory(string id, string interval)
+        /// <param name="option">
+        ///     start & end - UNIX time in milliseconds.
+        /// </param>
+        public async Task<List<CoinStructHistory>> GetHistory(string id, string interval, string option = "")
         {
             var result = new List<CoinStructHistory>();
             try
             {
-                var request = new HttpRequestMessage(HttpMethod.Get, $"/v2/assets/{id.ToLower()}/history?interval={interval.ToLower()}");
+                var request = new HttpRequestMessage(HttpMethod.Get, $"/v2/assets/{id.ToLower()}/history?interval={interval.ToLower()}" + option);
                 var response = await _client.SendAsync(request);
                 response.EnsureSuccessStatusCode();
 
@@ -71,6 +85,52 @@ namespace WPFAppConverter.Core.CoinAnalitic
             return result;
         }
 
+        /// <summary>
+        /// GET /candles 
+        /// </summary>
+        /// <param name="id">quote id</param>
+        /// <param name="exchange">exchange id</param>
+        /// <param name="interval">intervar = [ m1, m5, m15, m30, h1, h2, h6, h12, d1 ] candle interval</param>
+        /// <param name="baseId">base id</param>
+        /// <param name="option">
+        ///     start & end - UNIX time in milliseconds. omiting will return the most recent candles
+        /// </param>
+        public async Task<List<CoinStructCandles>> GetCandles(string id, string exchange, string interval, string baseId, string option = "")
+        {
+            var result = new List<CoinStructCandles>();
+            try
+            {
+                var request = new HttpRequestMessage(HttpMethod.Get, $"/v2/candles?exchange={exchange.ToLower()}&interval={interval.ToLower()}" +
+                    $"&baseId={baseId.ToLower()}&quoteId={id.ToLower()}" + option);
+                var response = await _client.SendAsync(request);
+                response.EnsureSuccessStatusCode();
+
+                var jsonObject = JObject.Parse(await response.Content.ReadAsStringAsync());
+                var dataArray = jsonObject["data"] as JArray;
+                if (dataArray != null)
+                    foreach (var item in dataArray)
+                        result.Add(item.ToObject<CoinStructCandles>());
+            }
+            catch (HttpRequestException e)
+            {
+                HandleException(e);
+            }
+            catch (Exception e)
+            {
+                HandleException(e);
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// GET /assets
+        /// </summary>
+        /// <param name="option">
+        ///     search - search by asset id (bitcoin) or symbol (BTC);
+        ///     ids - query with multiple ids=bitcoin,ethereum,monero;
+        ///     limit - max limit of 2000;
+        ///     offset - offset;
+        /// </param>
         public async Task<Dictionary<string, CoinStruct>> GetAssetsAll(string option = "")
         {
             var result = new Dictionary<string, CoinStruct>();
@@ -101,6 +161,10 @@ namespace WPFAppConverter.Core.CoinAnalitic
             return result;
         }
 
+        /// <summary>
+        /// GET /assets/{{id}}
+        /// </summary>
+        /// <param name="id">asset id</param>
         public async Task<CoinStruct> GetAssets(string id)
         {
             var result = new CoinStruct();
@@ -126,6 +190,9 @@ namespace WPFAppConverter.Core.CoinAnalitic
             return result;
         }
 
+        /// <summary>
+        /// GET /rates
+        /// </summary>
         public async Task<Dictionary<string, CoinStructRates>> GetRatesAll()
         {
             var result = new Dictionary<string, CoinStructRates>();
@@ -156,6 +223,10 @@ namespace WPFAppConverter.Core.CoinAnalitic
             return result;
         }
 
+        /// <summary>
+        /// GET /rates/{{id}}
+        /// </summary>
+        /// <param name="id">asset id</param>
         public async Task<CoinStructRates> GetRates(string id)
         {
             var result = new CoinStructRates();
@@ -181,6 +252,7 @@ namespace WPFAppConverter.Core.CoinAnalitic
             return result;
         }
 
+        // Displaying an error in MessageBox
         private void HandleException(Exception ex) =>
             MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
     }

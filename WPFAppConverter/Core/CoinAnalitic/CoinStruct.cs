@@ -3,23 +3,24 @@
 namespace WPFAppConverter.Core.CoinAnalitic
 {
     /* The structure is taken from the data API format. */
-    public struct CoinStruct        // Coin struct
+
+    public struct CoinStruct        // Asset structure
     {
         public string id { get; set; }
         public string rank { get; set; }
         public string symbol { get; set; }
         public string name { get; set; }
 
-        public decimal supply { get; set; }
+        public decimal? supply { get; set; }
         public decimal? maxSupply { get; set; }
-        public decimal marketCapUsd { get; set; }
-        public decimal volumeUsd24Hr { get; set; }
-        public decimal priceUsd { get; set; }
-        public decimal changePercent24Hr { get; set; }
-        public decimal vwap24Hr { get; set; }
+        public decimal? marketCapUsd { get; set; }
+        public decimal? volumeUsd24Hr { get; set; }
+        public decimal? priceUsd { get; set; }
+        public decimal? changePercent24Hr { get; set; }
+        public decimal? vwap24Hr { get; set; }
     }
 
-    public struct CoinStructMarkets // Market struct
+    public struct CoinStructMarkets // Asset markets structure
     {
         public string exchangeId { get; set; }
 
@@ -40,7 +41,7 @@ namespace WPFAppConverter.Core.CoinAnalitic
         fiat, crypto
     }
 
-    public struct CoinStructRates // Rates struct
+    public struct CoinStructRates // Rates structure
     {
         public string id { get; set; }
         public string symbol { get; set; }
@@ -51,7 +52,7 @@ namespace WPFAppConverter.Core.CoinAnalitic
         public decimal rateUsd { get; set; }
     }
 
-    public struct CoinStructHistory // History struct
+    public struct CoinStructHistory // Asset history structure
     {
         public decimal priceUsd { get; set; }
         public decimal? circulatingSupply { get; set; }
@@ -60,5 +61,16 @@ namespace WPFAppConverter.Core.CoinAnalitic
 
         public DateTime date { get; set; }
 
+    }
+
+    public struct CoinStructCandles // Candles structure 
+    {
+        public decimal open { get; set; }
+        public decimal high { get; set; }
+        public decimal low  { get; set; }
+        public decimal close { get; set; }
+        public decimal volume { get; set; }
+        
+        public long period { get; set; }
     }
 }

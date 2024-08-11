@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-windows\
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\
 WPFAppConverter
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\App.xaml
-7-2097667437
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\App.xaml
+81491139977
 
-192104112136
-1991550464279
-MVVM\View\Pages\AnaliticPage.xaml;MVVM\View\Pages\CurrencyPage.xaml;MVVM\View\Pages\HomePage.xaml;MVVM\View\Pages\SettingPage.xaml;MVVM\View\Window\MainWindow.xaml;MVVM\View\Window\Style\ApplicationStyle.ligth.xaml;Resource\Icon\IconSVG.xaml;
+261258453509
+216-869466646
+MVVM\View\Pages\AnaliticPage.xaml;MVVM\View\Pages\ConvertPage.xaml;MVVM\View\Pages\CurrencyPage.xaml;MVVM\View\Pages\HomePage.xaml;MVVM\View\Pages\SettingPage.xaml;MVVM\View\Window\Components\SearchBox.xaml;MVVM\View\Window\MainWindow.xaml;Resource\Icon\IconSVG.xaml;
 
-True
+False
 

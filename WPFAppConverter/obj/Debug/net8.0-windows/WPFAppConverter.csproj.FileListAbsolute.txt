@@ -33,3 +33,100 @@ C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-win
 C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-windows\WPFAppCo.5E1A344F.Up2Date
 C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Pages\CurrencyPage.g.cs
 C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Pages\CurrencyPage.baml
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\WPFAppConverter.dll.config
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Window\Components\SearchBox.g.cs
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Window\Components\SearchBox.baml
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\OpenTK.Compute.dll
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\OpenTK.Core.dll
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\GLWpfControl.dll
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\OpenTK.Graphics.dll
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\OpenTK.Input.dll
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\OpenTK.Mathematics.dll
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\OpenTK.OpenAL.dll
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\OpenTK.Windowing.Common.dll
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\OpenTK.Windowing.Desktop.dll
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\OpenTK.Windowing.GraphicsLibraryFramework.dll
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\ScottPlot.dll
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\ScottPlot.WPF.dll
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\SkiaSharp.dll
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\SkiaSharp.Views.Desktop.Common.dll
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\SkiaSharp.Views.WPF.dll
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\linux-x64\native\libglfw.so.3.3
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\osx-x64\native\libglfw.3.dylib
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\win-x64\native\glfw3.dll
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\win-x86\native\glfw3.dll
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\linux-arm\native\libSkiaSharp.so
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\linux-arm64\native\libSkiaSharp.so
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\linux-musl-x64\native\libSkiaSharp.so
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\linux-x64\native\libSkiaSharp.so
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\mrkyt\source\repos\WPFAppConverter\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\WPFAppConverter.exe
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\WPFAppConverter.dll.config
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\WPFAppConverter.deps.json
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\WPFAppConverter.runtimeconfig.json
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\WPFAppConverter.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\WPFAppConverter.pdb
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\OpenTK.Compute.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\OpenTK.Core.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\GLWpfControl.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\OpenTK.Graphics.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\OpenTK.Input.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\OpenTK.Mathematics.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\OpenTK.OpenAL.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\OpenTK.Windowing.Common.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\OpenTK.Windowing.Desktop.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\OpenTK.Windowing.GraphicsLibraryFramework.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\ScottPlot.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\ScottPlot.WPF.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\SkiaSharp.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\SkiaSharp.Views.Desktop.Common.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\SkiaSharp.Views.WPF.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\linux-x64\native\libglfw.so.3.3
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\osx-x64\native\libglfw.3.dylib
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\win-x64\native\glfw3.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\win-x86\native\glfw3.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\linux-arm\native\libSkiaSharp.so
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\linux-arm64\native\libSkiaSharp.so
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\linux-musl-x64\native\libSkiaSharp.so
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\linux-x64\native\libSkiaSharp.so
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\WPFAppConverter.csproj.AssemblyReference.cache
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\Resource\Icon\IconSVG.baml
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Pages\AnaliticPage.g.cs
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Pages\CurrencyPage.g.cs
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Pages\HomePage.g.cs
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Pages\SettingPage.g.cs
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Window\Components\SearchBox.g.cs
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Window\MainWindow.g.cs
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\WPFAppConverter_MarkupCompile.cache
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\WPFAppConverter_MarkupCompile.lref
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\App.baml
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Pages\AnaliticPage.baml
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Pages\CurrencyPage.baml
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Pages\HomePage.baml
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Pages\SettingPage.baml
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Window\Components\SearchBox.baml
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Window\MainWindow.baml
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\WPFAppConverter.g.resources
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\WPFAppConverter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\WPFAppConverter.AssemblyInfoInputs.cache
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\WPFAppConverter.AssemblyInfo.cs
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\WPFAppConverter.csproj.CoreCompileInputs.cache
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\WPFAppCo.5E1A344F.Up2Date
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\WPFAppConverter.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\refint\WPFAppConverter.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\WPFAppConverter.pdb
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\WPFAppConverter.genruntimeconfig.cache
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\ref\WPFAppConverter.dll
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Pages\ConvertPage.g.cs
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\obj\Debug\net8.0-windows\MVVM\View\Pages\ConvertPage.baml
+C:\Users\mrkot\OneDrive\Робочий стіл\WPFConverterMoney-main\WPFAppConverter\bin\Debug\net8.0-windows\WpfScreenHelper.dll
