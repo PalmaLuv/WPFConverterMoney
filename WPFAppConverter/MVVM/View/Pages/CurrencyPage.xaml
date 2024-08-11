@@ -64,12 +64,15 @@
             </Border>
         </Grid>
         
-        <TabControl Grid.Row="1">
+        <TabControl Grid.Row="1" Margin="10">
             <TabItem  Header="Analitic">
                 <scottplot:WpfPlot x:Name="PlotAnalitic"/>
             </TabItem>
             <TabItem Header="Markets">
-                
+                <DataGrid x:Name="AssetsMarkets"></DataGrid>
+            </TabItem>
+            <TabItem Header="History price ">
+                <scottplot:WpfPlot x:Name="PlotHistory"/>
             </TabItem>
         </TabControl>
     </Grid>

@@ -9,16 +9,11 @@
       Title="HomePage" Loaded="LoadingPage" DataContext="{StaticResource currentViewModel}">
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="350"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
         <Border Margin="30 10">
             <StackPanel> 
                 <DataGrid x:Name="top_assets" AutoGenerateColumns="False" Height="200"/>
                 <!-- get table information assets -->
-                <Button Content="View All" Command="{Binding AnaliticCommand}" Style="{StaticResource ViewAllButton-home}"/>
+                <Button Content="View All" Command="{Binding AnaliticCommand}" Style="{DynamicResource ViewAllButton-home}"/>
             </StackPanel>
         </Border>
 

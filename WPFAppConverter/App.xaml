@@ -11,7 +11,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="MVVM/View/Window/Style/ApplicationStyle.ligth.xaml"/>
+                <ResourceDictionary Source="MVVM/View/Window/Style/ApplicationStyle.light.xaml"/>
 
                 <ResourceDictionary>
                     <system:String x:Key="TitleForms">Converter Money</system:String>
@@ -34,6 +34,9 @@
             </DataTemplate>
             <DataTemplate DataType="{x:Type viewModel_Pages:CurrencyModel}">
                 <view_Pages:CurrencyPage/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel_Pages:ConvertModel}">
+                <view_Pages:ConvertPage/>
             </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>

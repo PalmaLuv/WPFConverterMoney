@@ -1,5 +1,4 @@
 ﻿using System.Windows;
-using WPFAppConverter.Core.CoinAnalitic;
 
 namespace WPFAppConverter
 {
@@ -14,6 +13,17 @@ namespace WPFAppConverter
 
             // Setting the Title of the programme from the parameters
             this.Resources["TitleForms"] = WPFAppConverter.Properties.Settings.Default.TitleName;
+        }
+
+        // Function for changing application themes
+        public void ChangeTheme(Uri themeUri)
+        {
+            Current.Resources.MergedDictionaries[0] = new ResourceDictionary { Source = themeUri };
+            foreach (Window window in Current.Windows)
+            {
+                window.InvalidateVisual();
+                window.UpdateLayout();
+            }
         }
     }
 

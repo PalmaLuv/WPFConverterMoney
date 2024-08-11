@@ -418,6 +418,18 @@
             "rid": "win"
           }
         }
+      },
+      "WpfScreenHelper/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/WpfScreenHelper.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/WpfScreenHelper.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
       }
     }
   },
@@ -927,28 +939,47 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "WpfScreenHelper/2.1.0": {
+      "sha512": "ZzS/lkme7QcYIvQgsVw9D1OuI/fSrNnoDXXDCrFmacYVvdGXOQlGEeQBbKdBP9r4k+3CsUQMZq59RU99I9Mjhw==",
+      "type": "package",
+      "path": "wpfscreenhelper/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/WpfScreenHelper.dll",
+        "lib/netcoreapp3.1/WpfScreenHelper.dll",
+        "wpfscreenhelper.2.1.0.nupkg.sha512",
+        "wpfscreenhelper.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "Newtonsoft.Json >= 13.0.3",
-      "ScottPlot.WPF >= 5.0.37"
+      "ScottPlot.WPF >= 5.0.37",
+      "WpfScreenHelper >= 2.1.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mrkyt\\.nuget\\packages\\": {}
+    "C:\\Users\\mrkot\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mrkyt\\source\\repos\\WPFAppConverter\\WPFAppConverter\\WPFAppConverter.csproj",
+      "projectUniqueName": "C:\\Users\\mrkot\\OneDrive\\Робочий стіл\\WPFConverterMoney-main\\WPFAppConverter\\WPFAppConverter.csproj",
       "projectName": "WPFAppConverter",
-      "projectPath": "C:\\Users\\mrkyt\\source\\repos\\WPFAppConverter\\WPFAppConverter\\WPFAppConverter.csproj",
-      "packagesPath": "C:\\Users\\mrkyt\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mrkyt\\source\\repos\\WPFAppConverter\\WPFAppConverter\\obj\\",
+      "projectPath": "C:\\Users\\mrkot\\OneDrive\\Робочий стіл\\WPFConverterMoney-main\\WPFAppConverter\\WPFAppConverter.csproj",
+      "packagesPath": "C:\\Users\\mrkot\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mrkot\\OneDrive\\Робочий стіл\\WPFConverterMoney-main\\WPFAppConverter\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\mrkyt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mrkot\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -986,6 +1017,10 @@
           "ScottPlot.WPF": {
             "target": "Package",
             "version": "[5.0.37, )"
+          },
+          "WpfScreenHelper": {
+            "target": "Package",
+            "version": "[2.1.0, )"
           }
         },
         "imports": [
@@ -1007,7 +1042,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

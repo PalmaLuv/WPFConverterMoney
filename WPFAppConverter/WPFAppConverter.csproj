@@ -13,12 +13,23 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Remove="MVVM\View\Window\Style\ApplicationStyle.dark.xaml" />
+    <Page Remove="MVVM\View\Window\Style\ApplicationStyle.light.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Resource\Image\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="ScottPlot.WPF" Version="5.0.37" />
+    <PackageReference Include="WpfScreenHelper" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="MVVM\View\Window\Style\ApplicationStyle.dark.xaml" />
+    <Resource Include="MVVM\View\Window\Style\ApplicationStyle.light.xaml" />
   </ItemGroup>
 
   <ItemGroup>

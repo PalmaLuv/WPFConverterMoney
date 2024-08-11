@@ -10,6 +10,9 @@
     <Compile Update="MVVM\View\Pages\AnaliticPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MVVM\View\Pages\ConvertPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MVVM\View\Pages\CurrencyPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -27,6 +30,9 @@
     <Page Update="MVVM\View\Pages\AnaliticPage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="MVVM\View\Pages\ConvertPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MVVM\View\Pages\CurrencyPage.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -42,9 +48,12 @@
     <Page Update="MVVM\View\Window\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MVVM\View\Window\Style\ApplicationStyle.ligth.xaml">
+    <Resource Update="MVVM\View\Window\Style\ApplicationStyle.dark.xaml">
       <SubType>Designer</SubType>
-    </Page>
+    </Resource>
+    <Resource Update="MVVM\View\Window\Style\ApplicationStyle.light.xaml">
+      <SubType>Designer</SubType>
+    </Resource>
     <Page Update="Resource\Icon\IconSVG.xaml">
       <SubType>Designer</SubType>
     </Page>
