@@ -1,0 +1,39 @@
+﻿<Page x:Class="WPFAppConverter.MVVM.View.Pages.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPFAppConverter.MVVM.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="900"
+      Title="HomePage" Loaded="LoadingPage">
+
+    <Grid>
+        <Border Margin="30 10">
+            <StackPanel>
+                <TextBlock Margin="5, 10">
+                    <TextBlock.Inlines>
+                        <Run Text="Number of available currencies in the application : " />
+                        <Run Text="{Binding Path=countInformation[0], Converter={StaticResource decimalFormatConverter}}"
+                             Style="{StaticResource ValueStyle}" Foreground="{StaticResource TextBlockForeground}" FontWeight="Bold"/>
+                        <LineBreak/>
+
+                        <Run Text="Number of exchanges available for exchange : " />
+                        <Run Text="{Binding Path=countInformation[1], Converter={StaticResource decimalFormatConverter}}"
+                             Style="{StaticResource ValueStyle}" Foreground="{StaticResource TextBlockForeground}" FontWeight="Bold"/>
+                        <LineBreak/>
+
+                        <Run Text="Number of available Assets in the application with information about them : " />
+                        <Run Text="{Binding Path=countInformation[2], Converter={StaticResource decimalFormatConverter}}"
+                             Style="{StaticResource ValueStyle}" Foreground="{StaticResource TextBlockForeground}" FontWeight="Bold"/>
+                    </TextBlock.Inlines>
+                </TextBlock>               
+                <DataGrid x:Name="top_assets" AutoGenerateColumns="False" Height="200"/>
+                <!-- get table information assets -->
+                <Button Content="View All" Command="{Binding _curr.AnaliticCommand}" Style="{DynamicResource ViewAllButton-home}"/>
+
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Page>
