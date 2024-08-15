@@ -1,7 +1,7 @@
-﻿using System.Runtime.InteropServices;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Input;
 using System.Windows.Interop;
+using System.Runtime.InteropServices;
 using WPFAppConverter.Core.ResizeForm;
 
 namespace WPFAppConverter
@@ -34,9 +34,15 @@ namespace WPFAppConverter
         private void Maximization(object sender, RoutedEventArgs e)                                  // Max size mainWindow
         {
             if (Application.Current.MainWindow.WindowState == WindowState.Maximized)
+            {
+                MaxBtn.Content = "❐";
                 WindowStateHelper.SetWindowSizeToNormal(this);
+            }
             else
+            {
+                MaxBtn.Content = "☐";
                 Application.Current.MainWindow.WindowState = WindowState.Maximized;
+            }
         }
 
         private void Minimazation(object sender, RoutedEventArgs e) =>                                // Min size mainWindow
@@ -109,7 +115,6 @@ namespace WPFAppConverter
         {
             if (WindowState == WindowState.Maximized)
             {
-                MaxBtn.Content = "❐";
                 WindowStateHelper.SetWindowMaximized(this);
                 WindowStateHelper.BlockStateChange = true;
 
@@ -124,13 +129,12 @@ namespace WPFAppConverter
             }
             else
             {
-                MaxBtn.Content = "☐";
                 if (WindowStateHelper.BlockStateChange)
                 {
                     WindowStateHelper.BlockStateChange = false;
                     return;
                 }
-
+                
                 WindowStateHelper.UpdateLastKnownNormalSize(Width, Height);
                 WindowStateHelper.UpdateLastKnownLocation(Top, Left);
 

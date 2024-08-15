@@ -1,6 +1,7 @@
 ﻿using ScottPlot;
 
 using System.Data;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Data;
 using System.ComponentModel;
@@ -9,9 +10,13 @@ using System.Collections.ObjectModel;
 
 using WPFAppConverter.Core.CoinAnalitic;
 using WPFAppConverter.MVVM.ViewModel;
+using ScottPlot.Plottables;
 
 namespace WPFAppConverter.MVVM.View.Pages
 {
+    /// <summary>
+    /// Interaction logic for CurrencyPage.xaml
+    /// </summary>
     public partial class CurrencyPage : Page
     {
         // Variables for saving data locally
@@ -138,8 +143,33 @@ namespace WPFAppConverter.MVVM.View.Pages
             // Add data to the plot
             var scatter = PlotHistory.Plot.Add.Scatter(dates, prices);
 
+            ToolTip toolTip = new ToolTip()
+            { Placement = System.Windows.Controls.Primitives.PlacementMode.Mouse, };
+
+            PlotHistory.MouseMove += (s, e) =>
+            {
+                Point mousePosition = e.GetPosition(PlotHistory); // get mouse position relative to PlotHistory
+                Pixel mousePixel = new((int)mousePosition.X, (int)mousePosition.Y); // create a pixel from the mouse position
+                Coordinates mouseLocation = PlotHistory.Plot.GetCoordinates(mousePixel);
+                DataPoint nearest = scatter.Data.GetNearest(mouseLocation, PlotHistory.Plot.LastRender);
+
+
+                if (nearest.IsReal)
+                {
+                    toolTip.IsOpen = true;
+                    toolTip.Content = $"Price USD : {_history[nearest.Index].priceUsd}\nDate : {_history[nearest.Index].date}";
+                    toolTip.PlacementTarget = PlotHistory;
+                }
+
+                if (!nearest.IsReal)
+                {
+                    toolTip.IsOpen = false;
+                }
+            };
+
             scatter.LineWidth = 3;
             scatter.MarkerSize = 10;
+
 
             scatter.FillY = true;
             scatter.FillYColor = scatter.Color.WithAlpha(.2);
@@ -155,6 +185,8 @@ namespace WPFAppConverter.MVVM.View.Pages
 
             // Display time labels on the bottom axis
             PlotHistory.Plot.Axes.DateTimeTicksBottom();
+
+            PlotHistory.Plot.HideGrid();
 
             // Refresh the plot to apply all changes
             PlotHistory.Refresh();

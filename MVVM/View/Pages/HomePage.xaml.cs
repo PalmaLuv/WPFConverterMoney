@@ -10,6 +10,9 @@ using WPFAppConverter.MVVM.ViewModel;
 
 namespace WPFAppConverter.MVVM.View.Pages
 {
+    /// <summary>
+    /// Interaction logic for HomePage.xaml
+    /// </summary>
     public partial class HomePage : Page
     {
         // Variables for saving data locally

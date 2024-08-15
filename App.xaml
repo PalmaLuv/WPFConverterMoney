@@ -27,6 +27,7 @@
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
 
+            <!-- DataTemplate pages -->
             <DataTemplate DataType="{x:Type viewModel_Pages:HomeModel}">
                 <view_Pages:HomePage/>
             </DataTemplate>

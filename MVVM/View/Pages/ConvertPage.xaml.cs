@@ -9,6 +9,9 @@ using WPFAppConverter.MVVM.View.Window.Components;
 
 namespace WPFAppConverter.MVVM.View.Pages
 {
+    /// <summary>
+    /// Interaction logic for ConvertPage.xaml
+    /// </summary>
     public partial class ConvertPage : Page
     {
         private CoinCap _coinCap;

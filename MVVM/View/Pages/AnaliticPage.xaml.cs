@@ -11,6 +11,9 @@ using WPFAppConverter.MVVM.View.Window.Components;
 
 namespace WPFAppConverter.MVVM.View.Pages
 {
+    /// <summary>
+    /// Interaction logic for AnaliticPage.xaml
+    /// </summary>
     public partial class AnaliticPage : Page
     {
         // Variables for saving data locally

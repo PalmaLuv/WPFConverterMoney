@@ -4,6 +4,9 @@ using Newtonsoft.Json.Linq;
 
 namespace WPFAppConverter.Core.CoinAnalitic
 {
+    /// <summary>
+    /// Functions for working with CoinCap API 2.0
+    /// </summary>
     class CoinCap
     {
         // Creating and configuring HttpClient to execute HTTP requests

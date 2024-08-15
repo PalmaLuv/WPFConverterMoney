@@ -1,6 +1,4 @@
-﻿using ScottPlot.Rendering.RenderActions;
-using System.Diagnostics.Eventing.Reader;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 
 namespace WPFAppConverter.MVVM.View.Window.Components
@@ -93,26 +91,3 @@ namespace WPFAppConverter.MVVM.View.Window.Components
         }
     }
 }
-
-
-/*
- 
-public string Title
-        {
-            get { return (string)GetValue(TitleProperty); }
-            set { SetValue(TitleProperty, value); }
-        }
-
-        public static readonly DependencyProperty TitleProperty =
-            DependencyProperty.Register("Title", typeof(string), typeof(LoaderComponent), new PropertyMetadata(string.Empty));
-
-        public string Description
-        {
-            get { return (string)GetValue(DescriptionProperty); }
-            set { SetValue(DescriptionProperty, value); }
-        }
-
-        public static readonly DependencyProperty DescriptionProperty =
-            DependencyProperty.Register("Description", typeof(string), typeof(LoaderComponent), new PropertyMetadata(string.Empty));
- 
- */

@@ -61,7 +61,8 @@ namespace WPFAppConverter.MVVM.View.Window.Components {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WPFAppConverter;component/mvvm/view/window/components/customtextbox.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WPFAppConverter;V1.0.0.0;component/mvvm/view/window/components/customtextbox.xam" +
+                    "l", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\..\..\MVVM\View\Window\Components\CustomTextBox.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

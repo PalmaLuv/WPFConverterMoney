@@ -60,7 +60,7 @@ namespace WPFAppConverter.MVVM.ViewModel
 
             this.CurrentView = this.HomeVM;
 
-            /* Реалізація команд перемикання сторінок (навігації) */
+            /* Implementation of page switching (navigation) commands */
             LastPageCommand = new RelayCommand(o => { CurrentView = LastView; });
             HomeCommand = new RelayCommand(o => { CurrentView = HomeVM; });
             AnaliticCommand = new RelayCommand(o => { CurrentView = AnaliticVM; });
@@ -68,6 +68,7 @@ namespace WPFAppConverter.MVVM.ViewModel
             ConvertCommand = new RelayCommand(o => { CurrentView = ConvertVM; });
             ExchangeCommand = new RelayCommand(o => { CurrentView = ExchangesVM; });
 
+            // Personal page Assets
             CurrencyCommand = new RelayCommand(
                     param =>
                     {
