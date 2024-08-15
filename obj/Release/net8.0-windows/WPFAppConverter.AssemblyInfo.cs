@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WPFAppConverter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba4438a8871334996e588d39fdad5f934d031228")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c973943255b8d8e5c9c8aabef40e745292f45d50")]
 [assembly: System.Reflection.AssemblyProductAttribute("WPFAppConverter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WPFAppConverter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
